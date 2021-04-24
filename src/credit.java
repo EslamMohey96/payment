@@ -1,13 +1,11 @@
-import java.sql.Date;
+import java.util.Date;
 
-public class credit {
+public class credit  extends payment{
     private String name ;
     private String type ;
     private Date expData ;
-    public check(){
-        
+    public credit(){
+        set_printBehavior(new printCashTrans());
+        set_authorizeBehavior(new authorizedCredit1());
     }
-}
-public class check extends payment{
-    
 }

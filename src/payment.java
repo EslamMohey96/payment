@@ -1,8 +1,18 @@
-public class payment{
+public abstract class payment {
     private float amount ;
-    private authorizeBehavior lauthorizeBehavior ; 
-    private printBehavior lprintBehavior;
-    public payment(){
-
+    private iauthorizeBehavior authorizeBehavior ; 
+    private iprintBehavior printBehavior;
+    
+    public void set_authorizeBehavior(iauthorizeBehavior authorizeBehavior){
+        this.authorizeBehavior =authorizeBehavior;
+    } 
+    public void set_printBehavior(iprintBehavior printBehavior){
+        this.printBehavior=printBehavior ;
+    }
+    public iauthorizeBehavior get_authorizeBehavior(){
+        return authorizeBehavior;
+    } 
+    public iprintBehavior get_printBehavior(){
+        return printBehavior ;
     }
 }

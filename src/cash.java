@@ -1,6 +1,7 @@
 public class cash extends payment{
     private float cashTendered ;
     public cash(){
-        khgkj,kug
+        set_printBehavior(new printCashTrans());
+        set_authorizeBehavior(new authorizedNon());;
     }
 }
